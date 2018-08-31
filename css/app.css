@@ -1,0 +1,29 @@
+li {
+	color: rgba(0,240,100,.2);
+}
+h1 {
+	color: #ffffff;
+	/*border-color: purple;
+	border-width: 5px;
+	border-style: solid;*/
+	border: 1px solid purple;
+}
+h4 {
+	color: #FF1493;
+	border: 5px dashed rgba(0,240,100,.7);
+	/*background: rgb(255,100,80);*/
+}
+/*#_ _ _ _ _ _*/
+/*first two digits correspond to how much red*/
+/*next two correspond to how much green*/
+/*last two correspond to how much blue*/
+/*rgba:a stands for alpha. The less alpha, the more transparent. Alpha ranges from 0 to 1*/
+
+body {
+	background: url(http://4493bz.1985t.com/uploads/allimg/160412/3-160412155915.jpg);
+	background-repeat: no-repeat; /*no-repeat表示若图片尺寸较小，不自动重复该图片来填充背景*/
+	background-size: cover;	/*cover表示用整张图片图片覆盖网页背景，若图片分辨率较高，不会被自动裁减*/
+}
+div	{
+	/*background: #3498db;*/
+}

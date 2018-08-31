@@ -1,0 +1,40 @@
+/*div {
+	width: 100px;
+	float: left;
+	the property float: left will make the two divs on the same line and form a grid
+}
+
+#one {
+	background-color: red;
+}
+#two {
+	background-color: purple;
+}*/
+
+img {
+	/*width: 100px;*/
+	/*all images will be in the same line, but there are some spaces between the images although we don't set margin or padding*/
+	/*float: left;*/
+	/*the spaces are got rid of*/
+	/*then we can add the customized space by using margin property*/
+	width: 30%;
+	/*30% of the parent element, namely the body*/
+	/*it is 30% because 30% make sure that 3 images fit in 1 line*/
+	float: left;
+	/*the spaces are got rid of*/
+	margin: 1.66%;
+	/*there are 6 margins all together, 10%/6=1.66%*/
+}
+
+p {
+	font-family: Raleway;
+	margin-left: 1.66%;
+	font-size: 23px;
+	font-weight: 800;
+	/*font-weight is to get the font bolder*/
+	text-transform: uppercase;
+	border-bottom: 2px solid #F1F1F1;
+	width: 30%;
+	padding-bottom: 20px;
+	/*the space between the text and the border is padding*/
+}

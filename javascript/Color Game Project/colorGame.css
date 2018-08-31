@@ -1,0 +1,82 @@
+body {
+	background-color:  #232323;
+	margin: 0;
+	font-family: "Avenir";
+}
+
+h1 {
+	color: white;
+	text-align: center;
+	background-color: steelblue;
+	margin: 0;
+	font-weight: normal;
+	text-transform: uppercase;
+	line-height: 1.1;
+	/*line-height调整行间距*/
+	padding: 20px 0;/*top and bottom: 20px, left and right: 0*/
+}
+
+#container {
+	max-width: 600px;
+	margin: 20px auto; /*center the container*/
+}
+
+.square {
+	width: 30%;
+	background-color: purple;
+	padding-bottom: 30%;
+	float: left;
+	margin: 1.66%;
+	border-radius: 15%;
+	/*border-radius is used to obtain the rounded corner*/
+	/*50% gives a circle*/
+	transition: background 0.6s;
+	/*here we only want the transition to be applied to background*/
+	/*when other properties change, it doesn't animate*/
+	-webkit-transition: background 0.6s;
+	-moz-transition: background 0.6s;
+	/*the above two properties are used to make transition compatible with more browsers*/
+}
+
+#stripe {
+	background-color: white;
+	height: 30px;
+	text-align: center;
+	color: black;
+}
+
+.selected {
+	color: white;
+	background-color: steelblue;
+}
+
+#colorDisplay {
+	font-size: 200%;
+}
+
+button {
+	border: none;
+	background: none;
+	text-transform: uppercase;
+	height: 100%;/*height: 100% makes the button take up 100% height of the containing element*/
+	font-weight: 700;
+	color: steelblue;
+	letter-spacing: 1px;/*letter-spacing控制字间距*/
+	font-size: inherit;
+	transition: all 0.3s;/*1st argument: what to apply transition, 2nd argument: how long it takes*/
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	outline: none;
+	/*outline: none disables the outline around the button after a button is clicked*/
+}
+
+#message {
+	display: inline-block;
+	width: 20%;
+	/*the above two properties gives the span some space even when the page is just loaded*/
+}
+
+button:hover {
+	color: white;
+	background: steelblue;
+}

@@ -1,0 +1,55 @@
+/*Element*/
+li {
+
+}
+
+/*class*/
+.hello {
+
+}
+
+/*id*/
+#name {
+
+}
+
+/*Star apply to every single element*/
+* {
+	border: 1px solid lightgrey;
+}
+
+/*Descendant Selector: take 2 or more tag names or 2 or more selectors and you chain them together*/
+/*for example: select all anchor tags inside an li but don't select other anchors*/
+li a {
+	color: red;
+}
+ul li a{
+	color: red;
+}
+
+/*Adjancent Selector*/
+/*select a sibling*/
+/*for example: select all uls after an h4 (on the same level, not indented)*/
+h4 + ul {
+	border: 4px solid red;
+}
+/*Attribute Selector*/
+/*a way to select elements basaed off of any attribute*/
+/*all anchors going to google are selected*/
+a[href="http://www.google.com"] {
+	background: blue;
+}
+
+/*nth of type*/
+/*select the 3rd ul on the page*/
+ul:nth-of-type(3){
+	background: purple;
+}
+/*the following will select the 3rd li in every group*/
+li:nth-of-type(3){
+	background: purple;
+}
+/*the following will select every even li in every group*/
+li:nth-of-type(even){
+	background: purple;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Specificity</title>
+	<style type="text/css">
+
+		body {
+			/*not being allpied*/
+			color: red;
+		}
+		p {
+			color: green;
+		}
+		ul	{
+			/*not being applied*/
+			/*closer to li*/
+			color: blue;
+		}
+		li {
+			/*applied*/
+			/*closest to li*/
+			color: orange;
+		}
+		.highlight {
+			/*applied to lis with class+"highlight"*/
+			color: yellow;
+		}
+		#special {
+			/*applied o the li with id="special"*/
+			color: pink;
+		}
+	</style>
+</head>
+<body>
+<p>Hello!!!</p>
+<ul>
+	<li id="special" class="highlight">John</li>
+	<li>Paul</li>
+	<li>George</li>
+	<li  class="highlight">Ringo</li>
+</ul>
+</body>
+</html>
+
+<!-- type:1 -->
+<!-- class:10 -->
+<!-- id:100 -->

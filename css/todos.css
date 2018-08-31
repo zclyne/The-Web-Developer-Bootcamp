@@ -1,0 +1,19 @@
+body {
+	background: url(https://images6.alphacoders.com/655/655990.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+li	{
+	border: 2px solid red;
+}
+/*#+id*/
+#special {
+	text-align: center;
+	font-size: 500%;
+	color: white;
+}
+/*.+class*/
+.completed {
+	text-decoration: line-through;
+}

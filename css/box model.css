@@ -1,0 +1,37 @@
+/*very important*/
+/*margin, border, padding, content*/
+/*padding: between the border and the text*/
+/*margin: on the other side of border, namely, outside the border and between boxes*/
+p {
+	/*content - width and height*/
+	/*width: 200px;*/
+	width: 50%;
+	/*50% of the parent element, here is the body because the p is inside the body*/
+	/*advantage of this: its size changes as the size of the windows changes*/
+	/*height: 300px;*/
+	/*Border*/
+	border: 2px solid blue;
+	/*the border goes all the way across the screen*/
+	/*border-top: 10px blue;*/
+	/*this sets the top border 10px*/
+	/*this failed to function*/
+
+	/*Padding*/
+	/*padding: 10px;*/
+	/*sets all four sides exactly the same*/
+	padding-left: 40px;
+	/*this sets the left padding 40px*/
+
+	/*Margin*/
+	/*margin: 100px;*/
+	/*this sets all the margins outside the box 100px*/
+	/*margin-top: 200px;*/
+	/*this sets the top margin 200px*/
+	/*margin: 20px 40px 500px 100px;*/
+	/*order: top, right, bottom. left*/
+	margin: 0 auto 0 auto;
+	/*this will center the selected element*/
+	/*margin: 0 auto;*/
+	/*this will set the top and the bottom margin 0, and the left margin and the right margin auto*/
+	/*this is the same as margin: 0 auto 0 auto;*/
+}

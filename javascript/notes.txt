@@ -1,0 +1,589 @@
+5 primitive datatypes: numbers(whole, fractional and negative numbers), strings, booleans, null and undefined. 
+js treats double quotes and single quotes the same.
+\ is the escape character
+example:"she said \"goodbye\" "
+to get the length of a string: "hello".length
+.length counts every character, including space and numbers
+
+variable:
+var yourVariableName = yourValue;
+js has dynamic typing.
+nomenclature: camel case
+
+null and undefined:
+variables that are declared but not initialized are undefined
+null is "explicitly nothing"
+
+methods:
+alert
+It pops up a message to the user. It alerts the user.
+it creates a window on the page.
+Examples:
+1. alert("Hello there!");
+2. alert(12412435);
+3. alert(198 * 345);
+
+prompt
+prompt lets us get input from a user
+prompt also shows a window.
+exp: prompt("What is your name?");
+the above exp doesn't store the input
+exp2:
+var userName = prompt("What's your name?");
+
+console.log
+It prints something to the js console
+exp: onsole.log("hello from the console!");
+
+//here are the comments
+clear() clears the console
+
+not all <script></script> should be put in the head, it depends.
+
+boolean logic:
+==:equal to
+example
+{
+	assume x=5
+	the result of x=="5" is true //"5" is a string
+}
+js perform type coersion to change the 2 operands into a similar type so that js can compare them
+===:equal value and type
+!==:not equal value or equal type
+quirks:
+{
+	true == "1" //true
+	true == "12" //false
+	0 == false //true
+	NaN == NaN //false
+}
+
+logical operators:
+&&:and
+||:or
+!:not
+truthy and falsy
+
+conditionals:
+3 keywords:if, else if, else
+example:
+if (age < 18) {
+	console.log("Sorry, you are not old enough to enter the venue");
+}
+else if (age < 21) {
+	console.log("You can enter, but cannot drink.");
+}
+else {
+	console.log("Come on in. You can drink.");
+}
+
+loops:
+dry code:don't repeat yourself
+while (someCondition) {
+	//run some code
+}
+
+for loops:
+for (init; condition; step) {
+	//run some code
+}
+example:
+for (var count = 0; count < 6; count++) {
+	console.log(count);
+}
+
+intro to functions:
+nomenclature of function names: camel case
+declaration:
+function doSomething() {
+	console.log("Hello world!");
+}
+'doSomething()' will call the function
+'doSomething' will return the context of the function in the console
+
+arguments:
+function square(num) {
+	console.log(num * num);
+}
+
+the return keyword:
+function square(num) {
+	return num * num;
+}
+"4 squared is: " + square(4);
+function capitalize(str) {
+	return str.charAt(0).toUpperCase() + str.slice(1);
+}
+function declaration:
+function capitalize(str) {
+	return str.charAt(0).toUpperCase() + str.slice(1);
+}
+function expression:
+var capitalize = function(str) {
+	return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
+
+Arrays:
+var friends = ["Charlie", "Liz", "David", "Mattias"];
+starting at 0
+add a new friend: friends[4] = "Amelie";  //firends[4] doesn't exist before
+if: friends[10]="Violet";
+then friends = ["Charlie", "Liz", "David", "Mattias", "Amelie", undefined * 5, "Violet"];
+define an array:
+{
+	1. var friends = [];
+	2. var friends = new Array(); //Array() is a function, these two a equivolent
+}
+arrays can contain any types of data
+var random_collection = [49, true, "Hermione", null];
+var nums = [45, 37, 89, 24];
+nums.length  //4
+
+array methods:
+push/pop, shift/unshift, indexOf, slice   //MDN
+var colors = ["red", "orange", "yellow"];
+{
+	push adds a new element to the end of the array
+	colors.push("green");
+	push also returns the length of the array after the new element has been added in
+	pop removes the last element in the array
+}
+{
+	colors.pop();
+	pop returns the element removed from the array
+}
+{
+	colors.unshift("infrared");	//["infrared", "red", "orange", "yellow"]
+	unshift adds a new element to the head of the array
+	unshift also returns the length of the array after the new element has been added in
+}
+{
+	colors.shift(); //["orange", "yellow"]
+	shift removes the first item in the array
+	shift also returns the removed element
+}
+{
+	indexOf() takes an argument ad it tries to find that argument in a given array
+	if found, returns the index where it is found, else return -1
+	if multiple elements, return the first one
+}
+{
+	slice is used to copy different portions of an array
+	var fruits= ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+	//use slice to copy the 2nd and 3rd fruits
+	//specify index where the new array starts(1) and ends(3)
+	var citrus = fruits.slice(1,3); //don't include fruits[3]
+	//this does not alter the original fruits array
+	//citrus contains ["Orange", "Lemon"]
+	/fruits contains ["Banana", "Orange", "Lemon", "Apple", "Mango"]
+	//you can also use slice() to copy an entire array
+	var nums = [1, 2, 3];
+	var otherNums = nums.slice();
+	both arrays are [1, 2, 3]
+}
+
+array iteration:
+1. for loop
+var colors = ["red", "orange", "yellow", "green"];
+for (var i = 0; i < colors.length; i++)
+{
+	console.log(colors[i]);
+}
+2. forEach  //this is more commonly use nowadays
+arr.forEach(someFunction);
+//passing a function into another function
+//It calls the function for every item in the array.
+scolors.forEach(function(color) {
+	//color is a placeholder, call it whatever you want, color is holding the value of each item in that array as the forEach loop through
+	console.log(color);
+});
+another way of coding:
+function printColor(color) {
+	console.log("********");
+	console.log(color);
+	console.log("********");
+}
+colors.forEach(printColor);
+//notice that we don't put parentheses after printColor here because JS immediately executes a function with parentheses following it
+//actually forEach calls printColor(color[i]), so this is equivalent the the above method
+.forEach takes a callback function, that callback function is expected to have at least 1, but up to 3, arguments. This is how .forEach was designed.
+
+The arguments are in a specific order:
+- The first one represents each element in the array (per loop iteration) that .forEach was called on.
+- The second represents the index of said element.
+- The third represents the array that .forEach was called on (it will be the same for every iteration of the loop).
+
+You have a couple options when calling .forEach on an array:
+
+You can pass in an anonymous function:
+
+[1,2,3].forEach(function(el, i, arr) {
+  console.log(el, i, arr);
+});
+ 
+Or you can pass in a pre-written, named function.
+
+function logNums(el, i, arr) {
+  console.log(el, i, arr);
+} 
+[1,2,3].forEach(logNums);
+
+Notice how in the second example we don't invoke logNums when passing it into .forEach? We simply pass in the function name. We don't need to invoke the logNums function, .forEach does that for us. In fact, it invokes the function multiple times, once for every element inside of the array.
+
+
+optional. Building Our Own ForEach:
+//example 1
+function myForEach(arr, func) {//func here is just a name, js won't execute it
+	//loop through array
+	//call func for each item in array
+	for (var i; i<arr.length; i++)
+	{
+		//js will actually execute the function with parentheses
+		func();
+	}
+}
+var colors = ["red", "orange", "yellow"];
+myForEach(colors, alert); //call empty alert for 3 times
+
+//example 2
+function myForEach(arr, func) {//func here is just a name, js won't execute it
+	//loop through array
+	//call func for each item in array
+	for (var i; i<arr.length; i++)
+	{
+		//js will actually execute the function with parentheses
+		func(arr[i]);
+	}
+}
+myForEach(colors, alert); //alert("red"), alert("orange"), alert("yellow")
+
+//example 3
+(function() {
+	console.log("I am a function!");
+})
+//the above one won't be executed in the console
+
+//example 4
+(function() {
+	console.log("I am a function!");
+})()
+//the above one will be executed. Notice the parentheses at the end
+
+//example 5
+Array.prototype.myForEach = function(func) {
+	//this refers to the array calling this function, for example when colors.myForEach(...), this = colors
+	for (var i; i<this.length; i++) func(this[i]);
+}
+friends = ["Charlie", "Dave", "Maddy", "Caitlin"];
+friends.myForEach(alert);
+friends.myForEach(function(name) {
+	console.log("I love " + name);
+});
+
+
+Objects:
+var person = {
+	//key-value pair
+	//objects don't have any built-in order
+	name: "Cindy",
+	age: 32,
+	city: "Missoula"
+};
+pay attention to the punctuations used
+to retrieve data:
+{
+	1. console.log(person["name"]);
+	2. console.log(person.name);
+	//you cannot use dot notation if the property starts with a number
+	someObject.1blah		//invalid
+	someObject["1blah"]		//valid
+	//you can lookup using a variable with bracket notation
+	var str = "name";
+	someObject.str 			//doesn't look for "name"
+	someObject[str]			//does evaluate str and looks for "name"
+	//you cannot use dot notation for property names with spaces
+	someObject.fav color 	//invalid
+	someObject["fav color"] //valid
+}
+to update data:
+{
+	person["age"] += 1;
+	person.city = "London";
+}
+creating objects:
+{
+	method 1:
+	{
+		var person = {}
+		person.name = "Travis";
+		person.age = 21;
+		person.city = "LA";
+	}
+	method 2: just like the one at the beginning
+	method 3:
+	{
+		var person = new Object(); //Object() is a function
+		person.name = "Travis";
+		person.age = "21";
+		person.city = "LA";
+	}
+}
+// objects can hold all sorts of data, even another object
+
+nested objects and arrays:
+var posts = [
+	{
+		title: "Cats are mediocre",
+		author: "Colt",
+		comments: ["Awesome post", "terrible post"]
+	},
+	{
+		title: "Cats are actually awesome",
+		author: "Cat Luvr",
+		comments: ["<3", "Go to hell I hate you"]
+	}
+];
+
+adding methods to objects:
+var obj = {
+	name: "Chuck",
+	age: 45,
+	isCool: false,
+	friends: ["Bob", "Tina"]
+	add: function(x, y) { //you can use obj.add(10,5) to call it
+		return x + y;
+	}
+}
+//adding methods to objects can avoid name collision
+
+the keyword this:
+//underscore.js is a bunch of code someone else wrote and we can use.
+//anything that starts with underscore is coming from the underscore library.
+var comments = {};
+comments.data = ["Good Job!", "Bye", "Lame..."];
+function print(arr) {
+	arr.forEach(function(element) {
+		console.log(element);
+	});
+}
+comments.print = function () { //notice the function doesn't have any argument
+	this.data.forEach(function(element) { // this means comments
+		console.log(element);
+	});
+}
+//the above one can work well
+
+
+DOM Manipulation:
+//when using js code to select html elements from the page and to manipulate them, be sure to include js code at the bottom of the html document, right before the closing </body> tag
+//the html will need to have loaded before the js is run, otherwise the js will throw an error because the html that it is trying to select and manipulate doesn't exist yet.
+
+DOM： Document Object Model
+document is the root node
+
+important selector methods:
+1. document.getElementById()
+{
+	// takes a string argument and returns the one element with a matching ID
+	var tag = document.getElementById("highlight");
+}
+2. document.getElementsByClassName()
+{
+	// takes a string argument and returns a list of elements that have a matching class
+	// returns a list even there is only one element
+	var tags = getElementsByClassName("bolded");
+}
+3. document.getElementsByTagName()
+{
+	// returns a list of all elements of a given tag name, like <li> or <h1>
+	// returns a list even there is only one element
+	var tags = document.getElementsByTagName("li");
+}
+4. document.querySelector()
+{
+	// returns the first element that matches a given css-style selector
+	var tag = document.querySelector("h1"); // select a tag
+	var tag = document.querySelector("#highlight"); // select an id
+	var tag = document.querySelector(".bolded"); // select a class, here only the first li with class "bolded" will be returned because querySelector always returns one element only
+	var li = document.querySelector("li a.special"); // this is valid, which select all the anchor tags with class "special" that are nested in li
+}
+5. document.querySelectorAll()
+{
+	// returns a list of elements that matches a given css-style selector
+	var tags = document.qerySelectorAll("h1");
+	var tags = document.qerySelectorAll(".bolded"); // returns a list of 2 lis that has class "bolded"
+	var li = document.querySelectorAll("#highlight"); // this will return a list consisting of only one li
+}
+
+Manipulating Style:
+// the style property is one way to manipulate an element's style
+example:
+{
+	//select
+	var tag = document.getElementById("hightlight");
+	//manipulate
+	tag.style.color = "blue";
+	tag.style.border = "10px solid red";
+	tag.style.fontSize = "70px";
+	tag.style.background = "yellow";
+	tag.style.marginTop = "200px";
+	//important:the right side must be a string
+}
+//a better idea:
+//define a css class,highlight for example, and the class highlight will have the properties that we're changing, and then we can then select an element with js and give it that highlight class
+
+a better example:
+{
+	//css
+	.highlight {
+		color: blue;
+		border: 10px solid red;
+	}
+	//js
+	var tag = document.querySelector("highlight");
+	tag.classList.add("highlight");
+}
+//classList: a read-only list that contains the classes for a given element. It is not an array, so .push cannot be used to add a class
+example:
+{
+	//css
+	.another-class {
+		color: purple;
+		fontSize: 76px;
+	}
+	//js
+	var tag = document.querySelector("another-class");
+	tag.classList.add("another-class");
+	tag.classList.remove("another-class");
+	tag.classList.toggle("another-class");
+	//toggle: takes a class name. if the given element has that class laready, it will then remove it. if the element doesn't have the class then it will turn it on.
+	//toggle is very useful
+}
+
+Manipulating Text and Content:
+example:
+{
+	//html
+	<p>This is an <strong>awesome</strong> paragraph</p>
+	//js
+	//select
+	var tag = document.querySelector("p");
+	//retrieve the textContent:
+	tag.textContent //"This is an awesome paragraph", without strong
+	//alter the textContent:
+	tag.textContent = "blah blah blah"; // this will get rid of the strong tag in p
+}
+// innerHTML: similar to textContent, except it returns a string of all the HTML contained in a given element
+example:
+{
+	//html
+	<p>This is an <strong>awesome</strong> paragraph</p>
+	//js
+	//select
+	var tag = document.querySelector("p");
+	//retrieve the textContent:
+	tag.innerHTML // "This is an <strong>awesome</strong> paragraph"
+}
+// another difference between innerHTML and textContent
+document.body.textContent = "<h1>Goodbye!</h1>"; // this won't change everything on the page into Goodbye!, actually textContent is not going to treat the string as html, it treats it purely as text
+document.body.innerHTML = "<h1>Goodbye!</h1>"; //it actually it as an h1
+
+Manipulating Attributes:
+// use getAttribute() and setAttribute() to read and write attributes like src or href
+example:
+{
+	//html
+	<a href="www.google.com">I am a link</a>
+	<img src="logo.png">
+	//js
+	var link = document.querySelector("a");
+	link.getAttribute("href");
+	//change href attribute
+	link.setAttribute("href","www.dogs.com");
+	//<a href="www.dogs.com">I am a link</a>
+
+	//to change the image src
+	var img = document.querySelector("img");
+	img.setAttribute("src","corgi.png");
+	//<img src="corgi.png">
+}
+
+Playing With Google Code Along:
+code:
+{
+	//change the logo picture
+	var logo = document.querySelector("#hplogo");
+	logo.setAttribute("srcset","https://i.pximg.net/img-master/img/2017/10/24/00/31/37/65570420_p0_master1200.jpg");
+	//use srcset instead of src because src doesn't not work here
+	logo.style.width = "300px";
+	logo.style.height = "450px";
+	logo.style.border = "2px solid purple";
+}
+//select multiple elements at one time
+code:
+{
+	var links = document.getElementsByTagName("a");
+	//links.setAttribute() doesn't exist because .setAttribute() only exists for single element
+	// use a loop instead
+	for (var i = 0; i < links.length; i++)
+	{
+		links[i].style.background = "pink";
+		links[i].setAttribute("href","https://wwww.bing.com");
+	}
+}
+
+
+Advanced DOM Manipulation:
+
+Introduction to Events:
+//events make pages interactive
+//we select an element and then add an event listener
+//to add a listener, we use a method called addEventListener
+code:
+{
+	//element.addEventListener(type, functionToCall);
+	// the second argument is the function to call when the event happens
+	var button = document.querySelector("button");
+	button.addEventListener("click",function() {
+		console.log("Someone clicked the button!");
+	});
+}
+example:
+{
+	//html
+	<button>Click Me</button>
+	<p>No One Has Clicked Me Yet</p>
+	//js
+	var button = document.querySelector("button");
+	var paragraph = document.querySelector("p");
+	//setup click listener
+	button.addEventListener("click", function() {
+		paragraph.textContent = "Someone clicked the button!";
+	});
+}
+another example:
+{
+	var lis = document.querySelectorAll("li");
+	for (var i = 0; i < lis.length; i++)
+	{
+		lis[i].addEventListener("click", function() {
+			this.style.color = "pink";
+			//inside a listener, the key this refers to the item that is clicked on/hovered on, etc.
+		});
+	}
+}
+//we could also rewrite it using a named function
+another example:
+{
+	var button = document.querySelector("button");
+	var paragraph = document.querySelector("p");
+	button.addEventListener("click", changeText); // don't pass changeText() because changeText() will be executed immediately
+	function changeText() {
+		paragraph.textContent = "Someone Clicked the Button";
+	}
+}
+
+other types of events:
+//mouseover: executes when the hover begins, don't execute continuously
+//mouseout: executes when the the mouse leaves the element

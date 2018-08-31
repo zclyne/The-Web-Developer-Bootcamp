@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Image Gallery</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="gallery.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+</head>
+<body>
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<!-- navbar-fixed-top fix the navbar on the top of the page so that it won't scroll away -->
+		<!-- navbar-inverse makes the navbar black -->
+		<!-- pay attention that the tag 'nav' should be outside the container -->
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-nav-demo" aria-expanded="false">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <!-- the above is the hamburger -->
+		      </button>
+				<a href="index.html" class="navbar-brand"><i class="fas fa-camera-retro"></i> IMGS</a>
+			</div>
+			<div class="collapse navbar-collapse" id="bs-nav-demo">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="index.html">Home</a></li>
+					<li><a href="gallery.html">Content</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#">Sign Up <i class="fa fa-user-plus"></i></a></li>
+					<li><a href="#">Login <i class="fa fa-user"></i></a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div class="container">
+	<div class="jumbotron">
+		<!-- put the jumbotron inside a container keeps it from taking up the full width of the screen -->
+		<h1><i class="fas fa-camera-retro"></i> The Image Gallery</h1>
+		<p>A website of pictures from Pixiv.</p>
+	</div>
+	<div class="row">
+		<div class="col-lg-4 col-sm-6">
+			<div class="thumbnail">
+				<!-- the class thumbnail puts image inside a thumbnail -->
+				<img src="https://i.pximg.net/img-master/img/2016/07/20/20/57/40/58004734_p0_master1200.jpg">
+			</div>
+		</div>
+		<div class="col-lg-4 col-sm-6">
+			<div class="thumbnail">
+				<!-- the class thumbnail puts image inside a thumbnail -->
+				<img src="https://i.pximg.net/img-master/img/2017/11/08/00/02/26/65796075_p0_master1200.jpg">
+			</div>
+		</div>
+		<div class="col-lg-4 col-sm-6">
+			<div class="thumbnail">
+				<!-- the class thumbnail puts image inside a thumbnail -->
+				<img src="https://i.pximg.net/img-master/img/2017/07/23/17/51/08/64010735_p0_master1200.jpg">
+			</div>
+		</div>
+		<div class="col-lg-4 col-sm-6">
+			<div class="thumbnail">
+				<!-- the class thumbnail puts image inside a thumbnail -->
+				<img src="https://i.pximg.net/img-master/img/2017/12/01/12/59/42/66111516_p0_master1200.jpg">
+			</div>
+		</div>
+		<div class="col-lg-4 col-sm-6">
+			<div class="thumbnail">
+				<!-- the class thumbnail puts image inside a thumbnail -->
+				<img src="https://i.pximg.net/img-master/img/2017/09/03/13/36/31/64766791_p0_master1200.jpg">
+			</div>
+		</div>
+		<div class="col-lg-4 col-sm-6">
+			<div class="thumbnail">
+				<!-- the class thumbnail puts image inside a thumbnail -->
+				<img src="https://i.pximg.net/img-master/img/2017/08/13/14/06/29/64390351_p0_master1200.jpg">
+			</div>
+		</div>
+		<div class="col-lg-4 col-sm-6">
+			<div class="thumbnail">
+				<!-- the class thumbnail puts image inside a thumbnail -->
+				<img src="https://i.pximg.net/img-master/img/2017/11/13/00/34/22/65872002_p0_master1200.jpg">
+			</div>
+		</div>
+		<div class="col-lg-4 col-sm-6">
+			<div class="thumbnail">
+				<!-- the class thumbnail puts image inside a thumbnail -->
+				<img src="https://i.pximg.net/img-master/img/2017/10/24/00/31/37/65570420_p0_master1200.jpg">
+			</div>
+		</div>
+		<div class="col-lg-4 col-sm-6">
+			<div class="thumbnail">
+				<!-- the class thumbnail puts image inside a thumbnail -->
+				<img src="https://i.pximg.net/img-master/img/2016/04/25/23/02/07/56534437_p0_master1200.jpg">
+			</div>
+		</div>
+	</div>
+	</div>
+
+<script
+  src="http://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+  <!-- jQuery 2.1.4 is used in the tutorial video, but it no longer functions, instead, 3.3.1 works well -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<!-- the .js file here is included in order to keep the html function well -->
+</body>
+</html>

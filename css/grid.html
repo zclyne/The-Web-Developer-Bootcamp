@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bootstrap Grid System</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap.css">
+	<style type="text/css">
+		.pink {
+			background: pink;
+			border: 1px solid purple;
+		}
+	</style>
+</head>
+<body>
+	<!-- important: there are 12 columns in the grid system -->
+	<div class="container">
+		<!-- when using bootstrap grid system, it must be in a container -->
+		<div class="row">
+			<!-- <div class="col-lg-6 pink">COL OG 6</div> -->
+			<!-- <div class="col-lg-6 pink">COL LG 6</div> -->
+			<!-- the two divs above split the container into two halves -->
+			<!-- <div class="col-lg-2 col-md-2 pink">COL LG 2</div>
+			<div class="col-lg-8 col-md-2 pink">COL LG 8</div>
+			<div class="col-lg-2 col-md-2 pink">COL LG 2</div> -->
+		</div>
+		<div class="row">
+			<!-- this row will go below the above row -->
+			<div class="col-md-3 col-sm-6 pink">
+				<div class="row">
+					<!-- the following splits the first col into 2 halves -->
+					<div class="col-lg-6 pink">first half</div>
+					<div class="col-lg-6 pink">other half</div>
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-6 pink">Tour date</div>
+			<div class="col-md-3 col-sm-6 pink">Tour date</div>
+			<div class="col-md-3 col-sm-6 pink">Tour date</div>
+			<!-- col-lg-3 is included as we set col-md-3 -->
+		</div>
+	</div>
+</body>
+</html>

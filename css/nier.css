@@ -1,0 +1,14 @@
+body {
+	background: url(https://images6.alphacoders.com/655/655990.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+#title {
+	text-align: center;
+	font-size: 500%;
+	color: white;
+}
+.role {
+	font-size: 400%;
+	color: white;
+}
