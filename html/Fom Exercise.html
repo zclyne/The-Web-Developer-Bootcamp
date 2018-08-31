@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>register</title>
+</head>
+<body>
+	<h1>Register</h1>
+	<form>
+		<div>
+			<label for="first">First Name:</label>
+				<input name="first" type="text" id="first" placeholder="John" required>
+			<label for="last">Last Name:</label>
+				<input name="last" type="text" id="last" placeholder="Smith" required>
+		</div>
+		<div>
+			<label for="male">Male</label>
+				<input id="male" type="radio" name="gender" value="male">
+			<label for="female">Female</label>
+				<input id="female" type="radio" name="gender" value="female">
+			<label for="other">Other</label>
+				<input id="other" type="radio" name="gender" value="other">
+		</div>
+		<div>
+			<label>Email:
+				<input type="Email" name="email" placeholder="your email" required>
+			</label>
+			<label>Password:
+				<input type="Password" name="password" pattern=".{5,10}" required title="5 to 10 characers" placeholder="password">
+			</label>
+		</div>
+		<div>
+			<label>Birthday:
+				<select name="month">
+					<option>Month</option>
+					<option value="Jan">Jan</option>
+					<option value="Feb">Fab</option>
+					<option value="Mar">Mar</option>
+				</select>
+				<select name="day">
+					<option>Day</option>
+					<option>1</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>
+					<option>5</option>
+				</select>
+				<select name="year">
+					<option>Year</option>
+					<option>2000</option>
+					<option>2001</option>
+					<option>2002</option>
+				</select>
+			</label>
+		</div>
+		<div>
+			<label>I agree to the terms and conditions
+				<input type="checkbox" name="agree">
+			</label>
+		</div>
+		<button>Submit</button>
+	</form>
+	<img src="https://68.media.tumblr.com/2e658244befdfb36520d27f814502e77/tumblr_ohs6xgz6Nv1rlk3g8o1_1280.jpg" width=150>
+</body>
+</html>
