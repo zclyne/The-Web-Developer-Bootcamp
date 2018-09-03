@@ -3,7 +3,7 @@ var p2Button = document.querySelector("#p2");
 var resetButton = document.querySelector("#reset");
 var p1Display = document.querySelector("#p1Display");
 var p2Display = document.querySelector("#p2Display");
-var numInput = document.querySelector("input[type='number']");
+var numInput = document.querySelector("input[type='number']");//just using "input" is also fine
 var winningScoreDisplay = document.querySelector("p span");//select the span inside a p
 
 var p1Score = 0;
@@ -37,9 +37,7 @@ p2Button.addEventListener("click", function() {
 	}
 });
 
-resetButton.addEventListener("click", function() {
-	reset();
-});
+resetButton.addEventListener("click", reset);
 
 function reset()
 {
@@ -53,7 +51,7 @@ function reset()
 }
 
 // a change event will run anytime the value changes
-numInput.addEventListener("change", function() {
+numInput.addEventListener("input", function() {
 	//.value is a string of whatever is contained in the input
 	winningScoreDisplay.textContent = this.value;
 	winningScore = Number(this.value);//numInput.value is a string
