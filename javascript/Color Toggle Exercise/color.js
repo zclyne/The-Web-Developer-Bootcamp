@@ -1,11 +1,11 @@
 //method 1
-var flag = false;
+var isPurple = false;
 document.querySelector("button").addEventListener("click", function() {
 	//document.querySelector("body") is equivalent to document.body
 	//body is a shortcut built into the document
-	if (!flag) document.body.style.background = "purple";
+	if (!isPurple) document.body.style.background = "purple";
 	else document.body.style.background = "white";
-	flag = !flag;
+	isPurple = !isPurple;
 });
 
 //method 2
