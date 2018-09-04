@@ -4,10 +4,21 @@
         <link rel="stylesheet" href="colorGame.css">
     </head>
     <body>
-        <h1>The Great <span id="colorDisplay">RGB</span> Color Game</h1>
+        <h1>
+            The Great 
+            <br>
+            <span id="colorDisplay">RGB</span>
+            <br>
+            Color Game
+        </h1>
+        <!-- the span inside h1 will inherit the white color from h1 -->
+        <!-- Thus getting rid of span in css won't change the span above -->
         
-        <div>
+        <div id="stripe">
+            <button id="reset">New colors</button>
             <span id="message"></span>
+            <button class="mode">Easy</button>
+            <button class="mode selected">Hard</button>
         </div>
 
         <div id="container">
