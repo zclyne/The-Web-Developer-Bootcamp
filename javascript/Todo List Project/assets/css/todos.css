@@ -1,0 +1,10 @@
+#container {
+    width: 360px; /* prevent the container to go all the way across the page */
+    margin: 0 auto; /* center the container, top and bottom: 0, left and right: auto */
+    border: 2px solid gray;
+}
+
+.completed {
+    color: gray;
+    text-decoration: line-through;
+}
