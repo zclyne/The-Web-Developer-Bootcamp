@@ -52,10 +52,15 @@ $("input[type='text']").keypress(function(event) {
         //grabbing new todo text from input
         var todoText = $(this).val();// $(this).val() is the content in the input
         //create a new li and add to ul
-        $("ul").append("<li><span><i class='fas fa-trash'></i></span> " + todoText + "</li>");
+        $("ul").append("<li><span><i class='fa fa-trash'></i></span> " + todoText + "</li>");
         //the above line will take the string inside the brackets
         //and add it to the ul as html inside of that ul
         //clear the input
         $(this).val("");
     }
+});
+
+//plus icon
+$("#toggle-form").click(function() {
+    $("input[type='text']").fadeToggle();
 });

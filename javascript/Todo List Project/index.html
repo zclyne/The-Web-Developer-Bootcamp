@@ -1,22 +1,23 @@
+<!DOCTYPE html>
 <html>
     <head>
         <title>Todo List</title>
-        <script src="assets/js/lib/jquery-3.3.1.min.js"></script>
         <link rel="stylesheet" href="assets/css/todos.css">
         <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-    </head>
+        <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+        <script src="assets/js/lib/jquery-3.3.1.min.js"></script>
+        </head>
     <body>
         <div id="container">
-            <h1>To-do List <i class="fas fa-plus"></i></h1>
+            <h1>To-do List <span id="toggle-form"><i class="fa fa-plus"></i></span></i></h1>
             <!-- i stands for icon -->
-            <input type="text"  placeholder="Add New Todo">
+            <input type="text" placeholder="Add New Todo">
             <ul>
-                <li><span><i class="fas fa-trash-alt"></i></span> Go To Potions Class</li>
-                <li><span><i class="fas fa-trash-alt"></i></span> Buy New Robes</li>
-                <li><span><i class="fas fa-trash-alt"></i></span> Visit Hagrid</li>
+                <li><span><i class="fa fa-trash"></i></span> Go To Potions Class</li>
+                <li><span><i class="fa fa-trash"></i></span> Buy New Robes</li>
+                <li><span><i class="fa fa-trash"></i></span> Visit Hagrid</li>
             </ul>
         </div>
-        <script src="assets/js/todos.js"></script>
+        <script type="text/javascript" src="assets/js/todos.js"></script>
     </body>
 </html>
