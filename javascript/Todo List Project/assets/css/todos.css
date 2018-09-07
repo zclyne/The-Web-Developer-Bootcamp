@@ -21,6 +21,10 @@ h1 {
     float: right;
 }
 
+.fa-trash-alt {
+    text-align: top;
+}
+
 #container {
     width: 360px; /* prevent the container to go all the way across the page */
     margin: 100px auto; /* center the container, top and bottom: 100px, left and right: auto */
@@ -56,7 +60,7 @@ span {
     color: white; /* the icon will be white */
     transition: 0.2s linear; /* move at a constant speed */
     opacity: 0;
-    vertical-align: center;
+    /* vertical-align: top; */
 }
 
 /* when the lis are hovered over, the corresponding span will show up */
