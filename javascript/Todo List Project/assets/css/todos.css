@@ -56,6 +56,7 @@ span {
     color: white; /* the icon will be white */
     transition: 0.2s linear; /* move at a constant speed */
     opacity: 0;
+    vertical-align: center;
 }
 
 /* when the lis are hovered over, the corresponding span will show up */
