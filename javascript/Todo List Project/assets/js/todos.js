@@ -1,5 +1,9 @@
 // Check off specific todos by clicking
-$("li").click(function() {
+$("ul").on("click", "li", function() { // use $("ul").on("click", "li") rather than $("li").click() or $("li").on("click")
+    // this is because we can only add a listener using jQuery on elements
+    // that exist when this code is run the first time
+    // when the code is run the first time, we don't have the lis that will be added by the user
+
     // don't use the following method
     // if li is gray, turn it black
     // if ($(this).css("color") === "rgb(128, 128, 128)") // use rgb color instead of 'gray' 
@@ -18,8 +22,9 @@ $("li").click(function() {
     //     });
     // }
 
-    //use this method
+    // use this method
     $(this).toggleClass("completed");
+    // although we use $("ul").on(), it actually add listeners to lis
 });
 
 // this method will lead to bubble event
@@ -30,11 +35,27 @@ $("li").click(function() {
 //     alert("123");
 // });
 
+//remove a todo
 // this method is viable, which doesn't cause bubbling
-$("span").click(function(event) {
+$("ul").on("click", "span", function(event) {
     event.stopPropagation(); // this is a jQuery method that stops the event from bubbling up
     // remove the li that contains this span
     $(this).parent().fadeOut(500, function() {// $(this) is span, $("this").parent() is li
         $(this).remove();// now $(this) is alreay li, so don't use .parent() again
     });
+});
+
+//add a new todo
+$("input[type='text']").keypress(function(event) {
+    if (event.which === 13)// if the character typed in is an 'enter'
+    {
+        //grabbing new todo text from input
+        var todoText = $(this).val();// $(this).val() is the content in the input
+        //create a new li and add to ul
+        $("ul").append("<li><span><i class='fas fa-trash'></i></span> " + todoText + "</li>");
+        //the above line will take the string inside the brackets
+        //and add it to the ul as html inside of that ul
+        //clear the input
+        $(this).val("");
+    }
 });

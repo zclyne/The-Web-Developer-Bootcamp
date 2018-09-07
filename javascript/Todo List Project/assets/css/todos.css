@@ -1,7 +1,84 @@
+body {
+    font-family: Roboto;
+    /* deal with the background gradients */
+    background: #12c2e9;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #f64f59, #c471ed, #12c2e9);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #f64f59, #c471ed, #12c2e9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+h1 {
+    background: #2980B9;
+    color: white;
+    margin: 0;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: normal;
+}
+
+/* this is the icon right to the h1 */
+.fa-plus {
+    float: right;
+}
+
 #container {
     width: 360px; /* prevent the container to go all the way across the page */
-    margin: 0 auto; /* center the container, top and bottom: 0, left and right: auto */
-    border: 2px solid gray;
+    margin: 100px auto; /* center the container, top and bottom: 100px, left and right: auto */
+    box-shadow: 0 0 3px rgba(0,0,0, 0.1);
+    background: #f7f7f7;
+}
+
+input {
+    font-size: 18px;
+    color: #2980B9;
+    background-color: #f7f7f7;
+    box-sizing: border-box; /* the width and height include the padding and border, but not the margin */
+    /* without the above line, the input will be too long because 100% width doesn't include padding */
+    width: 100%;
+    padding: 13px 13px 13px 20px; /* top, right, bottom, left */
+    border: 3px solid rgba(0, 0, 0, 0);
+}
+
+input:focus {
+    background: white;
+    /* when you select the input, the background color will turn white */
+    border: 3px solid #2980B9;
+    outline: none; /* default outline is blue */
+}
+
+span {
+    background-color: #e74c3c;
+    height: 40px;
+    width: 0;
+    display: inline-block;
+    margin-right: 20px;
+    text-align: center;
+    color: white; /* the icon will be white */
+    transition: 0.2s linear; /* move at a constant speed */
+    opacity: 0;
+}
+
+/* when the lis are hovered over, the corresponding span will show up */
+li:hover span {
+    width: 40px;
+    opacity: 1.0;
+}
+
+ul {
+    list-style: none; /* get rid of the bullet points */
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    background: #fff;
+    height: 40px;
+    line-height: 40px; /* change the size of the line to 40px, this will center the text */
+    color: #666;
+}
+
+li:nth-child(2n){ /* select every other li */
+    background: #f7f7f7;
 }
 
 .completed {
