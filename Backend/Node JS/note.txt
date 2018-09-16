@@ -1,0 +1,5 @@
+Interact with Node Console (Node)
+Run a file with node (node <filename>)
+npm: node package manager
+use 'npm install' to install a package through npm
+use 'require' to include a package and store the package in a variable
