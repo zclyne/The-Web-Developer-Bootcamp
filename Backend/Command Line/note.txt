@@ -1,0 +1,7 @@
+ls: list all the files in the current folder
+cd ..: back one level
+ls colors: colors/ is a folder in the current directory, and this command shows all the files in colors/
+touch orange.txt: make a new file called 'orange.txt' in the current directory
+mkdir FavColors: makes a new directory called 'FavColors' in the current directory
+rm blue.txt: remove blue.txt from the current directory
+rm -rf colors: delete the directory called 'colors' and all of the child directories that colors contains
