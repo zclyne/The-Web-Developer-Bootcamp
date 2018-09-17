@@ -1,0 +1,5 @@
+install express: npm install express (--save)
+--save: take the package name and version and automatically save it into the dependencies in our package.json file if we have one
+package.json: a file that contains all the meta data about this particular application or this package
+package.json is the recipe for the ingredients that are needed for a specific package or library rather than sending the contents of all of these individual packages
+use 'npm init' to create a new package.json
