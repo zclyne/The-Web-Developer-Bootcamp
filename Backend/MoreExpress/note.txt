@@ -1,0 +1,6 @@
+res.render("home.html"); // res.render() sends an html page
+res.render("home.ejs"); // res.render() sends an ejs file, ejs stands for embedded javascript
+.render() looks in /views for the file
+<%= %>: when we use this, the value that is returned will be rendered to the page and added to the html
+example: <%= 5 + 5 &>
+<% %>: when we're doing logic like if statement or loop, we don't want sth. to be added to the html 
