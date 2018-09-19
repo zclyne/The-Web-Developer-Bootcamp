@@ -1,0 +1,5 @@
+API: Application Programming Interface
+XML: Extended Markup Language. key-value pair
+json: Javascript Object Notation. Everything is a string
+json is now much more popular than XML
+curl http://www.google.com: make a request to google
