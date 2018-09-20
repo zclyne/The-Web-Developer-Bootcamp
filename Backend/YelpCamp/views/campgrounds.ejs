@@ -1,0 +1,36 @@
+<% include partials/header %>
+
+<!-- the bootstrap container will add some spacing on the sides -->
+<div class="container">
+    <!-- header acts similarly as div, but it has a little semantic meaning to it -->
+    <header class="jumbotron">
+        <!-- the following container gives the contents in it some space on the sides when we shrink down the window -->
+        <div class="container">
+            <h1>Welcome To YelpCamp!</h1>
+            <p>View our hand-picked campgrounds from all over the world</p>
+            <p>
+                <a class="btn btn-primary btn-lg" href="/campgrounds/new">Add New Campground</a>
+            </p>
+        </div>
+    </header>
+    
+    <!-- the style in the following div makes sure that the different heights of the images won't affect the layout of the page -->
+    <div class="row text-center" style="display: flex; flex-wrap: wrap;">
+        <% campgrounds.forEach(function(campground) { %>
+            <!-- we get bigger images when the screen size is larger, and when we shrinks it down, it will go down to just 2 images per row, and then it will shrink even further down to 1 image per row -->
+            <div class="col-md-3 col-sm-6">
+                <!-- thumbnail will help us make a little grid item inside that thumbnail -->
+                <div class="thumbnail">
+                    <img src="<%= campground.image %>">
+                    <!-- notice the colons outside the <%= %> -->
+                    <div class="caption">
+                        <h4><%= campground.name %></h4>
+                    </div>
+                </div>
+                
+            </div>
+         <% }); %>
+    </div>
+</div>
+
+<% include partials/footer %>
