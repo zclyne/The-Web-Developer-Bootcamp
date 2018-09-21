@@ -1,0 +1,7 @@
+use dogs: use the existing db called 'dogs' or create a db called 'dogs'
+db.dogs.find(): show all the objects in the db 'dogs'
+db.dogs.insert({name: "Rusty", breed: "Mutt"}): create a new dog in the db 'dogs'
+db.dogs.find({name: "Rusty"}): find the dog/dogs with name = "Rusty"
+db.dogs.update({name: "Lulu"}, {breed: "Labradoodle"}): update the breed of the dog with name = "Lulu" to "Labradoodle", but this will remove Lulu's name
+db.dogs.update({name: "Rusty"}, {$set: {name: "Tater", isCute: true}}): this is the correct way that will not remove other attributes because we add $set
+db.dogs.remove({breed: "Labradoodle"}): remove the dog/dogs with breed = "Labradoodle" from db 'dogs'
