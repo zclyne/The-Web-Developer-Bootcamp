@@ -5,3 +5,4 @@ db.dogs.find({name: "Rusty"}): find the dog/dogs with name = "Rusty"
 db.dogs.update({name: "Lulu"}, {breed: "Labradoodle"}): update the breed of the dog with name = "Lulu" to "Labradoodle", but this will remove Lulu's name
 db.dogs.update({name: "Rusty"}, {$set: {name: "Tater", isCute: true}}): this is the correct way that will not remove other attributes because we add $set
 db.dogs.remove({breed: "Labradoodle"}): remove the dog/dogs with breed = "Labradoodle" from db 'dogs'
+db.campgrounds.drop(): delete all campgrounds in the database
