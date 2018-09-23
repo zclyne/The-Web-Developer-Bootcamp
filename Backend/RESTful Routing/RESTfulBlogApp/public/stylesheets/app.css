@@ -1,0 +1,11 @@
+i.icon {
+    font-size: 2em;
+}
+
+.container.main { /* sth that have both class 'container' and class 'main' will be affected */
+    margin-top: 7.0em;
+}
+
+#delete {
+    display: inline;
+}

@@ -1,0 +1,4 @@
+REST: a way of mapping http routes and crud together (crud: create, read, update, destroy)
+PUT: another http method which updates data, rather than post new data to the db
+<%- %>: return the content inside of it and evaluate it to html
+sanitize: prevents user from adding script code into the blog contents that will be executed
