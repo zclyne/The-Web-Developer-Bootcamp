@@ -1,0 +1,3 @@
+associations: having associated data, namely data are related to each other
+relationships: one to one, one to many, many to many
+references: store the ids rather than the entire post contents
