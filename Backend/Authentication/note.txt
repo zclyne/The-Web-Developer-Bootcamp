@@ -1,0 +1,2 @@
+We use passport-js, passport-local and passport-local-mongoose
+we also use a package called express-session
