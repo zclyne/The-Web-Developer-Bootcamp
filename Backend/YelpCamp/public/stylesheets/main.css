@@ -1,0 +1,16 @@
+/* select all imgs inside of thumbnails */
+.thumbnail img { 
+    width: 100%;
+}
+
+.thumbnail {
+    padding: 0;
+}
+/* select all .caption-full inside of .thumbnails */
+.thumbnail .caption-full {
+    padding: 9px;
+}
+
+.delete-form {
+    display: inline;
+}

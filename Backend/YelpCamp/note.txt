@@ -1,9 +1,0 @@
-Restful routes:
-name        url         verb        description
-===========================================================
-INDEX      /dogs        GET      Display a list of all dogs
-NEW      /dogs/new      GET      Display form to make a new dog
-CREATE     /dogs       POST      Add new dog to DB
-SHOW     /dogs/:id      GET      Shows info about one dog               // id is used to indentify which dog to show
-
-seeds.js: we can run it to seed our database with some data, it is used to quickly check whether things work well
